@@ -26,6 +26,6 @@
 img[id^="aws"]{
 	margin:2px;
 	border:2px dotted grey;
-	border-radius: 40px;
+	border-radius: 10px;
 	vertical-align: middle;
 }
