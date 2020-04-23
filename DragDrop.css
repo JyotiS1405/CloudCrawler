@@ -25,7 +25,9 @@
 }
 img[id^="aws"]{
 	margin:2px;
-	border:2px dotted grey;
+	border:2px dotted lightgrey;
 	border-radius: 10px;
 	vertical-align: middle;
+	width:55px;
+	height:70px;
 }
