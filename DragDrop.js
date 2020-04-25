@@ -11,20 +11,20 @@ function init()
 
 function ec2Drag(e)
 {
-	imageCode='<img src="ec2.png" class="aws_EC2" onClick="reply_click(this.className)">';
-	e.dataTransfer.setData('Aws_EC2',imageCode);
+	imageCode='<img src="ec2.png" class="aws_ec2" onClick="reply_click(this.className)">';
+	e.dataTransfer.setData('aws_ec2',imageCode);
 }
 
 function s3Drag(e)
 {
 	imageCode='<img src="s3.png" class="aws_s3" onClick="reply_click(this.className)">';
-	e.dataTransfer.setData('Aws_S3',imageCode);
+	e.dataTransfer.setData('aws_s3',imageCode);
 	
 }
 function canvasDrop(e)
 {	
 	e.preventDefault();
-	subcanvas.innerHTML=subcanvas.innerHTML+e.dataTransfer.getData('Aws_S3')+e.dataTransfer.getData('Aws_EC2');	
+	subcanvas.innerHTML=subcanvas.innerHTML+e.dataTransfer.getData('aws_s3')+e.dataTransfer.getData('aws_ec2');	
 }
 function reply_click(clicked_class)
 {

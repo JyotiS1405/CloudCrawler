@@ -1,0 +1,41 @@
+<html>
+<head>
+  <style type="text/css">
+    .AB {
+  position: absolute;
+  z-index: 9;
+  border:3px solid grey;
+  background-color: #f1f1f1;
+  text-align: center;
+}
+  </style>
+</head>
+
+<body>
+  <div id="A" class="AB">
+			<img id="aws_ec2" src="ec2.png" draggable="true"> 
+  </div>
+  
+  <script type="text/javascript">
+    var divA = document.getElementById("A");
+
+    divA.addEventListener('mousedown', function() {
+      startDrag();
+    });
+
+    function startDrag() {
+      document.onmouseup = finishDrag;
+
+      document.onmousemove = function(e) {
+        divA.style.top = (divA.offsetTop + e.movementY) + "px";
+        divA.style.left = (divA.offsetLeft + e.movementX) + "px";
+      }
+    }
+
+    function finishDrag() {
+      document.onmouseup = null;
+      document.onmousemove = null;
+    }
+  </script>
+</body>
+</html>
